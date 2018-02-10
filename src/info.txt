@@ -1,0 +1,13 @@
+what the various files are:
+
+BR.cpp
+
+"the plugin-wide instance of the plugin class," whatever that means. looks like it's just where you list your "company's" plugins.
+
+BR.hpp
+
+the header file maybe, whatever that is? don't think I have to do anything with it, just leave it there
+
+BR_HFO.cpp (and others.cpp, etc)
+
+the actual plugin source code files. each plugin will have a different .cpp file. make sure to reference them in BR.cpp
