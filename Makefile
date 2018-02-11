@@ -1,4 +1,4 @@
-# SLUG = BeckstromResearch
+SLUG = BeckstromResearch
 VERSION = 0.5.0
 
 # FLAGS will be passed to both the C and C++ compiler
@@ -21,7 +21,7 @@ DISTRIBUTABLES += $(wildcard LICENSE*) res
 include ../../plugin.mk
 
 # do stuff
-dist: all
+install: all
 	echo "removing existing folder in plugins..."
 	rm -R ~/Documents/Rack/plugins/BeckstromResearch
 	echo "copying compiled stuff to plugins folder..."
