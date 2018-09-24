@@ -14,7 +14,7 @@ _from Wikipedia:_
 
 If you send a different frequency square wave into each of the 6 inputs, the output will be an analog-ish wave, a combination of the different square waves. In this way, you can take 6 square waves and turn them into a single analog voltage. Of course they don't all have to be square waves, you don't have to have six, etc.
 
-[vcos_to_r2r](vcos_to_r2r.png)
+![vcos_to_r2r](vcos_to_r2r.png)
 
 You can also use this module as a simple weighted mixer: the top input will be the loudest, the bottom input the quietest.
 
