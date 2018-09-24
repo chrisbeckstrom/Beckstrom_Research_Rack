@@ -1,6 +1,6 @@
-#include "rack.hpp"
-
-// in template, this file is called "Template.hpp"
+#include "BR_components.hpp"
+//#include "rack.hpp"
+	
 
 
 using namespace rack;
@@ -8,23 +8,7 @@ using namespace rack;
 
 extern Plugin *plugin;
 
-struct Knurlie : SVGScrew {
-	Knurlie() {
-		sw->svg = SVG::load(assetPlugin(plugin, "res/Knurlie.svg"));
-		sw->wrap();
-		box.size = sw->box.size;
-	}
-};
+extern Model *modelMixer;
+extern Model *modelMyModule;
 
-////////////////////
-// module widgets
-////////////////////
 
-struct MyModuleWidget : ModuleWidget {
-	MyModuleWidget();
-};
-
-// copied from Befaco
-struct MixerWidget : ModuleWidget {
-	MixerWidget();
-};
