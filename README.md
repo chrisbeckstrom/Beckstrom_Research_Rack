@@ -44,3 +44,11 @@ I [built a modular synthesizer from scratch](http://chrisbeckstrom.com/the-modul
 ![modular in the grass](modular_grass_backyard.jpg)
 
 There are so many great Rack modules out there, but there are some weird things I have in my DIY synth that I haven't been able to find – such as the R2R ladder in this repo. I hope to continue working on new modules, focusing on emulating some of the circuits I've built for my own system.
+
+# Attribution
+
+These modules use large portions of existing modules:  
+
+- [Befaco](https://github.com/VCVRack/Befaco)  
+- [Template](https://github.com/VCVRack/Template)
+
