@@ -1,1 +1,13 @@
 .git/*
+
+# build artefacts
+build/
+dist/
+
+# compiled plugin
+plugin.dylib
+plugin.dll
+plugin.sh
+
+# mac fs metadata
+.DS_Store
