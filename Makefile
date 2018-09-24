@@ -1,5 +1,5 @@
 RACK_DIR ?= ../..
-SLUG = Beckstrom_Research
+SLUG = BeckstromResearch
 VERSION = 0.6.0
 
 SOURCES += $(wildcard src/*.cpp)
