@@ -51,4 +51,5 @@ These modules use large portions of existing modules:
 
 - [Befaco](https://github.com/VCVRack/Befaco)  
 - [Template](https://github.com/VCVRack/Template)
+- [ML Modules](https://github.com/martin-lueders/ML_modules)  
 
