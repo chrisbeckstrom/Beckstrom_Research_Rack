@@ -11,3 +11,9 @@ plugin.sh
 
 # mac fs metadata
 .DS_Store
+
+# other stuff
+# https://github.com/VCVRack/community/issues/513#issuecomment-424150454
+*.o
+*.so
+*.dylib
