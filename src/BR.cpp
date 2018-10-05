@@ -10,5 +10,6 @@ void init(rack::Plugin *p) {
 	p->version = TOSTRING(VERSION);
 
 	p->addModel(modelMixer);
-	p->addModel(modelMyModule);
+	p->addModel(modelHFO);
+	p->addModel(modelInverter);
 }

@@ -3,7 +3,7 @@
 // uses some stuff from ML Modules too
 
 
-struct MyModule : Module {
+struct HFO: Module {
 	enum ParamIds {
 		PITCH_PARAM,
 		NUM_PARAMS
@@ -25,7 +25,7 @@ struct MyModule : Module {
 	float phase = 0.0;
 	//float blinkPhase = 0.0;
 
-	MyModule() : Module(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS) {}
+	HFO() : Module(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS) {}
 	void step() override;
 
 	// For more advanced Module features, read Rack's engine.hpp header file
@@ -35,7 +35,7 @@ struct MyModule : Module {
 };
 
 
-void MyModule::step() {
+void HFO::step() {
 	// Implement a simple sine oscillator
 	float deltaTime = engineGetSampleTime();
 
@@ -68,7 +68,7 @@ void MyModule::step() {
 
 
 struct MyModuleWidget : ModuleWidget {
-	MyModuleWidget(MyModule *module) : ModuleWidget(module) {
+	MyModuleWidget(HFO*module) : ModuleWidget(module) {
 		setPanel(SVG::load(assetPlugin(plugin, "res/CBhfo.svg")));
 
 		addChild(Widget::create<MLScrew>(Vec(RACK_GRID_WIDTH, 0)));
@@ -76,11 +76,11 @@ struct MyModuleWidget : ModuleWidget {
 		addChild(Widget::create<MLScrew>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(Widget::create<MLScrew>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addParam(ParamWidget::create<Davies1900hBlackKnob>(Vec(28, 87), module, MyModule::PITCH_PARAM, -9.0, 9.0, 0.0));
+		addParam(ParamWidget::create<Davies1900hBlackKnob>(Vec(28, 87), module, HFO::PITCH_PARAM, -9.0, 9.0, 0.0));
 
-		addInput(Port::create<MLPort>(Vec(33, 186), Port::INPUT, module, MyModule::PITCH_INPUT));
+		addInput(Port::create<MLPort>(Vec(33, 186), Port::INPUT, module, HFO::PITCH_INPUT));
 
-		addOutput(Port::create<MLPort>(Vec(33, 275), Port::OUTPUT, module, MyModule::SINE_OUTPUT));
+		addOutput(Port::create<MLPort>(Vec(33, 275), Port::OUTPUT, module, HFO::SINE_OUTPUT));
 
 		//addChild(ModuleLightWidget::create<MediumLight<RedLight>>(Vec(41, 59), module, MyModule::BLINK_LIGHT));
 	}
@@ -91,4 +91,4 @@ struct MyModuleWidget : ModuleWidget {
 // author name for categorization per plugin, module slug (should never
 // change), human-readable module name, and any number of tags
 // (found in `include/tags.hpp`) separated by commas.
-Model *modelMyModule = Model::create<MyModule, MyModuleWidget>("Beckstrom Research", "HFO", "High Frequency Oscillator", OSCILLATOR_TAG);
+Model *modelHFO= Model::create<HFO, MyModuleWidget>("Beckstrom Research", "HFO", "High Frequency Oscillator", OSCILLATOR_TAG);

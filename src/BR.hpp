@@ -9,6 +9,7 @@ using namespace rack;
 extern Plugin *plugin;
 
 extern Model *modelMixer;
-extern Model *modelMyModule;
+extern Model *modelHFO;
+extern Model *modelInverter;
 
 
