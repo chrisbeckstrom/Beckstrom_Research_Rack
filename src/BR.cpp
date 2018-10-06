@@ -12,4 +12,5 @@ void init(rack::Plugin *p) {
 	p->addModel(modelMixer);
 	p->addModel(modelHFO);
 	p->addModel(modelInverter);
+	p->addModel(modelVCMixer);
 }

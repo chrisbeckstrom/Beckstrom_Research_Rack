@@ -11,5 +11,6 @@ extern Plugin *plugin;
 extern Model *modelMixer;
 extern Model *modelHFO;
 extern Model *modelInverter;
+extern Model *modelVCMixer;
 
 
