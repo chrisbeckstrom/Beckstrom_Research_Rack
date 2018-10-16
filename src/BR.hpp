@@ -12,5 +12,6 @@ extern Model *modelMixer;
 extern Model *modelHFO;
 extern Model *modelInverter;
 extern Model *modelVCMixer;
+extern Model *modelVCO;
 
 
